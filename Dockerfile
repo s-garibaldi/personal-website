@@ -4,10 +4,9 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-COPY bun.lockb ./
 
 # Install dependencies
-RUN bun install --frozen-lockfile
+RUN bun install
 
 # Copy the rest of the application
 COPY . .
@@ -21,7 +20,6 @@ WORKDIR /app
 
 # Copy necessary files from builder
 COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/bun.lockb ./
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
