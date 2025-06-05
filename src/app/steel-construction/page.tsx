@@ -1,0 +1,128 @@
+import Image from "next/image";
+import Link from "next/link";
+import { FaBuilding, FaTools, FaIndustry, FaChartLine } from 'react-icons/fa';
+
+export default function SteelConstruction() {
+  const services = [
+    {
+      icon: <FaBuilding className="text-4xl text-blue-400 mb-4" />,
+      title: "Commercial Buildings",
+      description: "State-of-the-art steel structures for commercial spaces, offering durability and flexibility in design."
+    },
+    {
+      icon: <FaTools className="text-4xl text-blue-400 mb-4" />,
+      title: "Industrial Facilities",
+      description: "Robust steel construction solutions for manufacturing plants and industrial complexes."
+    },
+    {
+      icon: <FaIndustry className="text-4xl text-blue-400 mb-4" />,
+      title: "Infrastructure Projects",
+      description: "Large-scale steel infrastructure projects including bridges, stadiums, and transportation hubs."
+    },
+    {
+      icon: <FaChartLine className="text-4xl text-blue-400 mb-4" />,
+      title: "Sustainable Solutions",
+      description: "Eco-friendly steel construction methods that reduce environmental impact while maintaining strength."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative h-[40vh] bg-black">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 to-black/80">
+          <div className="relative w-full h-full">
+            <Image
+              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&h=1080"
+              alt="Steel Construction"
+              fill
+              className="object-cover mix-blend-overlay opacity-70"
+              priority
+              unoptimized
+            />
+          </div>
+        </div>
+        
+        <div className="relative container mx-auto px-6 h-full flex items-center">
+          <div className="max-w-3xl text-white">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Steel Construction
+              <span className="block text-2xl md:text-3xl text-blue-400 mt-2">
+                Building the Future with Strength and Precision
+              </span>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-16 text-white">
+            Our Steel Construction Services
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-700">
+                {service.icon}
+                <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-16 text-white">
+            Why Choose Steel Construction?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-3">Durability & Strength</h3>
+                <p className="text-gray-300">Steel structures offer unmatched durability and strength, capable of withstanding extreme weather conditions and heavy loads.</p>
+              </div>
+              <div className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-3">Cost-Effective</h3>
+                <p className="text-gray-300">Steel construction provides excellent value through reduced construction time, lower maintenance costs, and long-term durability.</p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-3">Sustainability</h3>
+                <p className="text-gray-300">Steel is 100% recyclable and our construction methods minimize environmental impact while maximizing energy efficiency.</p>
+              </div>
+              <div className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-3">Design Flexibility</h3>
+                <p className="text-gray-300">Steel allows for innovative architectural designs and can be easily modified or expanded to meet changing needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-900 py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">
+            Ready to Start Your Steel Construction Project?
+          </h2>
+          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+            Contact our team of experts to discuss your construction needs and get a detailed quote.
+          </p>
+          <Link 
+            href="/contact"
+            className="inline-block bg-white hover:bg-gray-100 text-blue-900 px-8 py-3 rounded-md text-lg font-semibold transition-colors border-2 border-transparent hover:border-white hover:bg-transparent hover:text-white"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+} 

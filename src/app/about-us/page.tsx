@@ -7,24 +7,27 @@ export default function AboutUs() {
       name: "Juan Garibaldi",
       position: "CEO & Founder",
       image: "/images/IMG_9852.JPG",
+      imagePosition: "object-[center_20%]",
       quote: "Leading with innovation and integrity in the steel industry.",
       linkedin: "#",
       twitter: "#",
       email: "juan@segallc.com"
     },
     {
-      name: "Sarah Johnson",
+      name: "Gabriel Garibaldi",
       position: "Chief Operations Officer",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400",
+      image: "/images/IMG_9850.JPG",
+      imagePosition: "object-[90%_0%]",
       quote: "Excellence in operations is the foundation of our success.",
       linkedin: "#",
       twitter: "#",
-      email: "sarah@segallc.com"
+      email: "gabriel@segallc.com"
     },
     {
       name: "Michael Chen",
-      position: "Technical Director",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400",
+      position: "Overseas Operations Manager",
+      image: "/images/IMG_9851.JPG",
+      imagePosition: "object-center",
       quote: "Pushing the boundaries of steel technology every day.",
       linkedin: "#",
       twitter: "#",
@@ -99,7 +102,7 @@ export default function AboutUs() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className={`object-cover ${member.imagePosition}`}
                     unoptimized
                   />
                 </div>

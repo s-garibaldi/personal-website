@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaGlobe, FaIndustry, FaChartLine, FaHandshake } from 'react-icons/fa';
 
 export default function Home() {
@@ -30,9 +31,12 @@ export default function Home() {
             <p className="text-xl mb-8 text-gray-200">
               Leading the global steel industry with innovation, quality, and sustainable practices
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-semibold transition-colors">
+            <Link 
+              href="/explore-solutions"
+              className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-semibold transition-colors"
+            >
               Explore Our Solutions
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -84,20 +88,27 @@ export default function Home() {
               {
                 url: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600',
                 title: 'Steel Construction',
-                desc: 'Modern infrastructure development'
+                desc: 'Modern infrastructure development',
+                link: '/steel-construction'
               },
               {
-                url: 'https://images.unsplash.com/photo-1565976469782-7c91e1955b04?w=800&h=600',
+                url: 'https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=800&h=600',
                 title: 'Manufacturing Excellence',
-                desc: 'Advanced steel processing'
+                desc: 'Advanced steel processing',
+                link: '/manufacturing-excellence'
               },
               {
-                url: 'https://images.unsplash.com/photo-1565715101379-54e8fdc110ce?w=800&h=600',
+                url: 'https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=800&h=600',
                 title: 'Industrial Solutions',
-                desc: 'Innovative steel applications'
+                desc: 'Innovative steel applications',
+                link: '/industrial-solutions'
               }
             ].map((project, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg bg-gray-800 border border-gray-700">
+              <Link 
+                key={index} 
+                href={project.link || '#'} 
+                className="group relative overflow-hidden rounded-lg shadow-lg bg-gray-800 border border-gray-700"
+              >
                 <div className="relative h-[300px]">
                   <Image
                     src={project.url}
@@ -113,7 +124,7 @@ export default function Home() {
                     <p className="text-sm text-blue-300">{project.desc}</p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -128,11 +139,14 @@ export default function Home() {
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             Join us in building the future of steel manufacturing with innovative solutions and sustainable practices.
           </p>
-          <button className="bg-white hover:bg-gray-100 text-blue-900 px-8 py-3 rounded-md text-lg font-semibold transition-colors border-2 border-transparent hover:border-white hover:bg-transparent hover:text-white">
+          <Link 
+            href="/contact"
+            className="inline-block bg-white hover:bg-gray-100 text-blue-900 px-8 py-3 rounded-md text-lg font-semibold transition-colors border-2 border-transparent hover:border-white hover:bg-transparent hover:text-white"
+          >
             Contact Us Today
-          </button>
+          </Link>
         </div>
       </section>
     </div>
   );
-}
+} 
