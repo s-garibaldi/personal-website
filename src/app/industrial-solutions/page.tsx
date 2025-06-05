@@ -137,7 +137,7 @@ export default function IndustrialSolutions() {
             Ready to Transform Your Industrial Operations?
           </h2>
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our industrial solutions can enhance your business.
+            Let&apos;s discuss how our industrial solutions can enhance your business.
           </p>
           <Link 
             href="/contact"

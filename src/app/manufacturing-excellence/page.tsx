@@ -137,7 +137,7 @@ export default function ManufacturingExcellence() {
             Ready to Experience Manufacturing Excellence?
           </h2>
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our manufacturing capabilities can benefit your business.
+            Let&apos; discuss how our manufacturing capabilities can benefit your business.
           </p>
           <Link 
             href="/contact"

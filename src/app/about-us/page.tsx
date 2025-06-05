@@ -109,7 +109,7 @@ export default function AboutUs() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
                   <p className="text-blue-400 mb-4">{member.position}</p>
-                  <p className="text-gray-300 italic mb-6">"{member.quote}"</p>
+                  <p className="text-gray-300 italic mb-6">{member.quote}</p>
                   <div className="flex space-x-4">
                     <a href={member.linkedin} className="text-gray-400 hover:text-blue-400 transition-colors">
                       <FaLinkedin className="text-xl" />

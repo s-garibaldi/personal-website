@@ -137,7 +137,7 @@ export default function ExploreSolutions() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our steel solutions can help you achieve your goals.
+            Let&apos;s discuss how our steel solutions can help you achieve your goals.
           </p>
           <Link 
             href="/contact"
